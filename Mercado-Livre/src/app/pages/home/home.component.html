@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<router-outlet>
+    <mat-toolbar class="ToolBar">
+        <div class="headerPrincipal">
+            <div>
+                <img src="../../../assets/logo-pt__large_plus.png" alt="" srcset="">
+            </div>
+            <div class="inputPrincipal">
+                    <input class="input" placeholder="Buscar produtos, marcas e muito mais...">
+                    <button class="inputButton">
+                        <div class="Loko">
+                            <img class="imgLupa" src="../../../assets/icons8-lupa-20.png" alt="">
+                        </div>
+                    </button>
+            </div>
+            <div>
+                <img class="imgDisney" src="../../../assets/img_disneyplus.webp" alt="" srcset="">
+            </div>
+            <div class="classInfoCEP">
+                <img src="../../../assets/icons8-perímetro-virtual-30 (1).png" alt="">
+                <a href="https://www.mercadolivre.com.br/navigation/addresses-hub?go=https%3A%2F%2Fwww.mercadolivre.com.br%2F">
+                    <span class="nav-menu-cp-send">Enviar para Johnny</span>
+                    <span class="nav-menu-link-cp"> Rua Frederico Jens...</span>
+                </a>
+            </div>
+            <div class="opcoes">
+                <button mat-button [matMenuTriggerFor]="menu">Categorias</button>
+                <img src="../../../assets/icons8-chevron-right-24.png" alt="">
+                <mat-menu #menu="matMenu">
+                <button mat-menu-item>Veíulos</button>
+                <button mat-menu-item>Supermercado</button>
+                <button mat-menu-item>Tecnologia</button>
+                <button mat-menu-item>Casa e Móveis</button>
+                <button mat-menu-item>Eletrodomésticos</button>
+                <button mat-menu-item>Esportes e Fitness</button>
+                <button mat-menu-item>Ferramentas</button>
+                <button mat-menu-item>Construção</button>
+                <button mat-menu-item>Saúde</button>
+                <button mat-menu-item>Acessórios para Veículos</button>
+                </mat-menu>
+                <button>Ofertas do Dia</button>
+                <button>Histórico</button>
+                <button>Moda</button>
+                <button>Vender</button>
+                <button>Contato</button>
+            </div>
+        </div>
+    </mat-toolbar>
+</router-outlet>
