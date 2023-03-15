@@ -46,6 +46,32 @@
                 <button>Vender</button>
                 <button>Contato</button>
             </div>
+            <!-- Termiar  -->
+            <div class="opcao2">
+                <button mat-button [matMenuTriggerFor]="menu2">
+                    Johnny
+                    <img src="../../../assets/icons8-chevron-right-24.png" alt="">
+                </button>
+                <mat-menu #menu2="matMenu">
+                    <button mat-menu-item>Perfíl</button>
+                    <button mat-menu-item>Configurações</button>
+                    <button mat-menu-item>Sair da Conta</button>
+                </mat-menu>
+                <button>Contas</button>
+                <button mat-button [matMenuTriggerFor]="menu3">
+                    Favoritos
+                    <img src="../../../assets/icons8-chevron-right-24.png" alt="">
+                </button>
+                <mat-menu #menu3="matMenu">
+                    <button mat-menu-item>Compras</button>
+                    <button mat-menu-item>Não sei</button>
+                    <button mat-menu-item>Salvos</button>
+                </mat-menu>
+                <!-- IMAGEM NOTIFICAÇÕES -->
+                <button>Notificações</button>
+                <!-- IMAGEM CARRINHO -->
+                <button>Carrinho</button>
+            </div>
         </div>
     </mat-toolbar>
 </router-outlet>
