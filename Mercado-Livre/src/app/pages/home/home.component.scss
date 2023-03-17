@@ -1,7 +1,8 @@
+// HEADER
 .ToolBar{
     height: 16vh;
     display: grid;
-    background-color: rgb(254, 254, 55);
+    background-color: #fff159;
     
     .headerPrincipal{
         width: 100%;
@@ -9,7 +10,7 @@
         display: grid;
         margin: 4vh 0vw 0vh 0vw;
         justify-content: center;
-        grid-template-rows: 48px 28px;
+        grid-template-rows: 48px 32px;
         grid-template-columns: 162px minmax(340px, 580px)
         minmax(350px, 390px);
         
@@ -60,6 +61,10 @@
             grid-row: 2/2;
             grid-column: 1/3;
 
+            mat-icon{
+                color: rgba(0, 0, 0, 0.878);
+            }
+
             a{
                 font-size: 12px;
                 position: static;
@@ -88,20 +93,170 @@
 
 
     // Menu de opções 
-    // TERMINAR
     .opcoes{
+        display: flex;
         grid-row: 2/2;
         grid-column: 2/3;
-
+        align-items: center;
+        
+        
         button{
-            cursor: pointer;
-            color: rgba(30, 29, 29, 0.578);
             border: none;
+            display: flex;
+            cursor: pointer;
+            align-items: center;
             background-color: transparent;
+            color: rgba(30, 29, 29, 0.578);
         }
+    }
+
+    .opcao2{
+        grid-row: 2/2;
+        display: flex;
+        grid-column: 3/3;
+        align-items: center;
+        padding-left: 2.6vw;
 
         img{
-            height: 12px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        p{
+            display: flex;
+            margin-top: 10px;
+            padding-left: 10px;
+            align-items: center;
+        }
+        
+        button{
+            border: none;
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            background-color: transparent;
+            color: rgba(30, 29, 29, 0.578);
+        }
+    }
+}
+
+// NAVBAR
+mat-drawer-container{
+    width: 100%;
+    height: calc(100vh - 16vh);
+    
+    mat-drawer{
+        width: 16%;
+        display: flex;
+        font-weight: 500;
+        justify-content: center;
+        background-color: white;
+        color: rgba(36, 36, 36, 0.823);
+        border-top: 1px solid rgba(174, 174, 174, 0.689);
+    }
+
+    mat-list{
+        margin-top: 10px;
+
+        p{
+            gap: 9px;
+            display: flex;
+            color: black;
+            align-items: center;
+        }
+
+        mat-icon{
+            color: black;
+        }
+    }
+    
+    mat-expansion-panel{
+        border: none;
+        cursor: pointer;
+        box-shadow: none;
+        background-color: white;
+
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.254);
+            transition: 0.3s;
+        }
+        
+        mat-expansion-panel-header{
+            padding: 0vh 0vw 0vh 0vw;
+            
+            mat-list-item{
+
+                width: 100vw;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+        }
+    }
+    
+    mat-drawer-content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: #e7e7e7;
+
+        .Chato{
+            width: 40%;
+            height: 10%;
+            color: black;
+            padding-top: 1vh;
+            display: inline-block;
+            justify-content: center;
+            margin: 4vh 15vw 0vh 0vw;
+            background-color: white;
+
+            .CardCentro{
+                width: 100%;
+                height: 100%;
+                display: flex;
+            }
+
+            img{
+                width: 45px;
+                height: 45px;
+                margin-left: 1vw;
+                margin-right: 1vw;
+                border-radius: 50%;
+            }
+            
+            .CardCentro2{
+                display: flex;
+                flex-direction: column;
+                
+            }
+        }
+        .Legal{
+            width: 40%;
+            height: 78%;
+            display: flex;
+            color: black;
+            padding-top: 1vh;
+            align-items: center;
+            justify-content: center;
+            margin: 3vh 15vw 0vh 0vw;
+            background-color: white;
+            box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.367);
+
+            .CardCentro2{
+                display: flex;
+                margin-top: 10px;
+                justify-content: center;
+                flex-direction: column;
+                
+                
+                mat-icon{
+                    color: rgb(14, 125, 251);
+                    font-size: 30px;
+                    height: 30px;
+                    width: 30px;
+                }
+            }
         }
     }
 }
