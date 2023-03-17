@@ -6,39 +6,40 @@
                 <img src="../../../assets/logo-pt__large_plus.png" alt="" srcset="">
             </div>
             <div class="inputPrincipal">
-                    <input class="input" placeholder="Buscar produtos, marcas e muito mais...">
-                    <button class="inputButton">
-                        <div class="Loko">
-                            <img class="imgLupa" src="../../../assets/icons8-lupa-20.png" alt="">
-                        </div>
-                    </button>
+                <input class="input" placeholder="Buscar produtos, marcas e muito mais...">
+                <button class="inputButton">
+                    <div class="Loko">
+                        <img class="imgLupa" src="../../../assets/icons8-lupa-20.png" alt="">
+                    </div>
+                </button>
             </div>
             <div>
                 <img class="imgDisney" src="../../../assets/img_disneyplus.webp" alt="" srcset="">
             </div>
             <div class="classInfoCEP">
-                <img src="../../../assets/icons8-perímetro-virtual-30 (1).png" alt="">
-                <a href="https://www.mercadolivre.com.br/navigation/addresses-hub?go=https%3A%2F%2Fwww.mercadolivre.com.br%2F">
-                    <span class="nav-menu-cp-send">Enviar para Johnny</span>
+                <mat-icon> place</mat-icon>
+                <a
+                    href="https://www.mercadolivre.com.br/navigation/addresses-hub?go=https%3A%2F%2Fwww.mercadolivre.com.br%2F">
+                    <span style="margin: 0;" class="nav-menu-cp-send">Enviar para Johnny</span>
                     <span class="nav-menu-link-cp"> Rua Frederico Jens...</span>
                 </a>
             </div>
             <div class="opcoes">
                 <button mat-button [matMenuTriggerFor]="menu">
                     Categorias
-                    <img src="../../../assets/icons8-chevron-right-24.png" alt="">
+                    <mat-icon class="chevron">expand_more</mat-icon>
                 </button>
                 <mat-menu #menu="matMenu">
-                <button mat-menu-item>Veíulos</button>
-                <button mat-menu-item>Supermercado</button>
-                <button mat-menu-item>Tecnologia</button>
-                <button mat-menu-item>Casa e Móveis</button>
-                <button mat-menu-item>Eletrodomésticos</button>
-                <button mat-menu-item>Esportes e Fitness</button>
-                <button mat-menu-item>Ferramentas</button>
-                <button mat-menu-item>Construção</button>
-                <button mat-menu-item>Saúde</button>
-                <button mat-menu-item>Acessórios para Veículos</button>
+                    <button mat-menu-item>Veíulos</button>
+                    <button mat-menu-item>Supermercado</button>
+                    <button mat-menu-item>Tecnologia</button>
+                    <button mat-menu-item>Casa e Móveis</button>
+                    <button mat-menu-item>Eletrodomésticos</button>
+                    <button mat-menu-item>Esportes e Fitness</button>
+                    <button mat-menu-item>Ferramentas</button>
+                    <button mat-menu-item>Construção</button>
+                    <button mat-menu-item>Saúde</button>
+                    <button mat-menu-item>Acessórios para Veículos</button>
                 </mat-menu>
                 <button>Ofertas do Dia</button>
                 <button>Histórico</button>
@@ -46,11 +47,11 @@
                 <button>Vender</button>
                 <button>Contato</button>
             </div>
-            <!-- Termiar  -->
             <div class="opcao2">
                 <button mat-button [matMenuTriggerFor]="menu2">
-                    Johnny
-                    <img src="../../../assets/icons8-chevron-right-24.png" alt="">
+                    <img src="http://lorempixel.com.br/50/50" alt="">
+                    <p>Johnny</p>
+                    <mat-icon>expand_more</mat-icon>
                 </button>
                 <mat-menu #menu2="matMenu">
                     <button mat-menu-item>Perfíl</button>
@@ -60,18 +61,86 @@
                 <button>Contas</button>
                 <button mat-button [matMenuTriggerFor]="menu3">
                     Favoritos
-                    <img src="../../../assets/icons8-chevron-right-24.png" alt="">
+                    <mat-icon>expand_more</mat-icon>
                 </button>
                 <mat-menu #menu3="matMenu">
                     <button mat-menu-item>Compras</button>
                     <button mat-menu-item>Não sei</button>
                     <button mat-menu-item>Salvos</button>
                 </mat-menu>
-                <!-- IMAGEM NOTIFICAÇÕES -->
-                <button>Notificações</button>
-                <!-- IMAGEM CARRINHO -->
-                <button>Carrinho</button>
+                <button><mat-icon>notifications_none</mat-icon></button>
+                <button><mat-icon>shopping_cart</mat-icon></button>
             </div>
         </div>
     </mat-toolbar>
+    <nav>
+        <mat-drawer-container class="example-container">
+            <mat-drawer mode="side" opened>
+                <mat-list role="list">
+                    <mat-list-item role="listitem">
+                        <p mat-line><mat-icon mat-list-icon>menu</mat-icon>Minha Conta</p>
+                    </mat-list-item>
+                    <mat-list-item role="listitem">
+                        <p mat-line><mat-icon>shopping_basket</mat-icon>Compras</p>
+                    </mat-list-item>                    
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <mat-list-item>
+                                    <p mat-line><mat-icon>loyalty</mat-icon>Vendas</p>
+                                </mat-list-item>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Carros</p>
+                        <p>Motos</p>
+                        <p>Barcos</p>
+                        <p>Corpo Humano</p>
+                    </mat-expansion-panel>
+                    <mat-list-item role="listitem">
+                        <p mat-line><mat-icon> store_mall_directory</mat-icon>Mercado Shops</p>
+                    </mat-list-item>
+                    <mat-list-item role="listitem">
+                        <p mat-line><mat-icon>library_music</mat-icon>Vídeo e Música</p>
+                    </mat-list-item>
+                    <mat-list-item role="listitem">
+                        <p mat-line><mat-icon>receipt</mat-icon>Faturamento</p>
+                    </mat-list-item>
+                    <mat-list-item role="listitem">
+                        <p mat-line><mat-icon> person_pin</mat-icon>Meu Perfil</p>
+                    </mat-list-item>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <mat-list-item role="listitem">
+                                    <p mat-line><mat-icon>settings</mat-icon>Configurações</p>
+                                </mat-list-item>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Keep</p>
+                        <p>Going</p>
+                        <p>Brooh</p>
+                    </mat-expansion-panel>
+                </mat-list>
+            </mat-drawer>
+            <mat-drawer-content>
+                <mat-card class="Chato">
+                    <div class="CardCentro">
+                        <img src="http://lorempixel.com.br/50/50" alt="">
+                        <p><b>Johnny Blasius</b><br> Nível 4 - Mercado Pontos</p> 
+                    </div>
+                </mat-card>
+                <mat-card class="Legal">
+                    <div class="CardCentro2">
+                        <p><mat-icon> person_pin</mat-icon><b>Meu Dados</b> <br> Gerencie seus dados pessoais.</p>
+                        <p><mat-icon>lock</mat-icon><span>Segurança</span><br>Você tem configurações pendentes.</p> 
+                        <p><mat-icon>credit_card</mat-icon><span>Meus Cartões</span><b></b> Gerencie seus cartões.</p> 
+                        <p><mat-icon>location_on</mat-icon><span>Endereços</span><b></b> Altere seus endereços ou adicione outro.</p> 
+                        <p><mat-icon>security</mat-icon><span>Privacidade</span><br>Gerencie o uso das suas informações pessoais.</p> 
+                        <p><mat-icon>mode_comment</mat-icon>Comunicações<br>Escolha que tipo de informação você quer receber.</p> 
+                        <p><mat-icon>monetization_on</mat-icon>Assinaturas <br>Gerencie suas assinaturas</p>
+                    </div>
+                </mat-card>
+            </mat-drawer-content>
+        </mat-drawer-container>
+    </nav>
 </router-outlet>
