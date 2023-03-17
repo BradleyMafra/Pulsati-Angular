@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomeComponent } from './pages/home/home.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatMenuModule } from '@angular/material/menu';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDivider } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -14,12 +20,18 @@ import { MatMenuModule } from '@angular/material/menu';
     HomeComponent,
   ],
   imports: [
+    // MatDivider,
+    MatIconModule,
     BrowserModule,
-    MatToolbarModule,
-    AppRoutingModule,
-    MatFormFieldModule,    
-    BrowserAnimationsModule,
     MatMenuModule,
+    MatListModule,
+    MatCardModule,
+    AppRoutingModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatFormFieldModule,    
+    MatExpansionModule,
+    BrowserAnimationsModule,
     
   ],
   providers: [],
