@@ -1,0 +1,46 @@
+        <mat-toolbar>
+            <mat-toolbar-row>
+            <h1 routerLink="/" class="ToolBarTitle">Hospital Denver</h1>
+            <span class="spacer"></span>
+            <button mat-button routerLink="/paciente">Cadastrar Paciente</button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-drawer-container class="example-container">
+        <mat-drawer-content>
+            <h1>Cadastrar Paciente</h1>
+
+            <mat-form-field>
+                <input type="text" matInput placeholder="Nome" [(ngModel)]="paciente.nome">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input type="number" matInput [(ngModel)]="paciente.idade">
+            </mat-form-field>
+
+            <mat-form-field *ngFor="let dependente of paciente.dependentes">
+                <input type="text" matInput placeholder="Nome" [(ngModel)]="dependente.nome">
+                <input type="number" matInput [(ngModel)]="dependente.idade">
+            </mat-form-field>
+
+            <button class="botaoAdd" (click)="addDependentes()">Adicionar Dependentes</button>
+            <button class="botaoSalvar" (click)="save()">Salvar</button>
+            
+            <mat-accordion>
+                <mat-expansion-panel *ngFor="let paciente of pacientes">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>{{paciente.nome}}</mat-panel-title>
+                        <mat-panel-description>{{paciente.idade}}</mat-panel-description>
+                    </mat-expansion-panel-header>   
+                    <mat-list>
+                        <mat-list-item *ngFor="let dependente  of paciente.dependentes">
+                            <mat-icon mat-list-icon>person</mat-icon>
+                            {{dependente.nome}},
+                            {{dependente.idade}}
+                            </mat-list-item>
+                        </mat-list>
+                        
+                    </mat-expansion-panel>
+                </mat-accordion>
+            
+        </mat-drawer-content>
+    </mat-drawer-container>

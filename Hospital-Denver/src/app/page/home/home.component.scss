@@ -1,0 +1,34 @@
+// Definir fontes personalizadas (substitua com as suas)
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+// Definir variáveis para cores personalizadas
+$cor-primaria: #008CBA;
+$cor-secundaria: #005A6E;
+
+// Estilizar a barra de ferramentas
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+  background-color: $cor-primaria;
+  color: #fff;
+
+  .ToolBarTitle {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  button[routerLink='/paciente'] {
+    background-color: $cor-secundaria;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 8px 16px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: darken($cor-secundaria, 10%);
+      cursor: pointer;
+    }
+  }
+}
