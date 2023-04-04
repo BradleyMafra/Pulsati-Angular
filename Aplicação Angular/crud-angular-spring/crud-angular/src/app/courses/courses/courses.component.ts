@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Course } from '../model/course';
+import { Component } from '@angular/core';
+import { CoursesService } from '../services/courses.service';
 
 @Component({
   selector: 'app-courses',
@@ -7,17 +9,14 @@ import { Course } from '../model/course';
   styleUrls: ['./courses.component.scss']
 })
 export class CoursesComponent {
-  // Forma mais simplificada de inicializar um array.
-  courses: Course[] = []; 
-
+  // Inicialização de array
+  courses: Observable<Course[]>; 
   displayedColumns = ['name', 'category'];
 
-  constructor() {
-    // Forma mais verbosa de inicializar um array.
-    //this.courses = [];
+  constructor(private coursesService: CoursesService) {
+    this.courses = this.coursesService.list();
   };
 
   ngOnInit(): void {
-
   }
 }
